@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SourceDir).\ALCIDES_UTILITIES\;$(SourceDir).\ALCIDES_WINDOW\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir).\ALCIDES_UTILITIES;$(SolutionDir).\ALCIDES_WINDOW;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -131,15 +131,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\ALCIDES_UTILITIES\ALCIDES_UTILITIES.vcxproj">
       <Project>{377f6b4f-1059-4890-858a-f74cf7e81abb}</Project>
     </ProjectReference>
     <ProjectReference Include="..\ALCIDES_WINDOW\ALCIDES_WINDOW.vcxproj">
       <Project>{d2226400-d7cf-4141-ba17-2e80200f558d}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

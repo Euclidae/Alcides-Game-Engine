@@ -21,6 +21,10 @@ AlcidesWindow::Window::Window(const std::string title, int width, int height, in
 	}
 }
 
+AlcidesWindow::Window::~Window()
+{
+}
+
 void AlcidesWindow::Window::set_window_name(const std::string& name) {
 	m_title = name;
 	SDL_SetWindowTitle(m_pWindow.get(), name.c_str());
