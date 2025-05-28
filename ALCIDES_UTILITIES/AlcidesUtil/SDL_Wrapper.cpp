@@ -1,3 +1,4 @@
+#define SDL_MAIN_HANDLED 1
 #include "SDL_Wrapper.hpp"
 #include <iostream>
 
@@ -9,12 +10,12 @@ namespace Alcides_Util {
 
 	void SDL_Destroyer::operator()(SDL_Gamepad* controller) const
 	{
-
+		
 	}
 
 	void SDL_Destroyer::operator()(SDL_Cursor* cursor) const
 	{
-
+		SDL_DestroyCursor(cursor);
 	}
 }
 	
